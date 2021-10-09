@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "selfit-components": {
+      "projectType": "library",
+      "root": "projects/selfit-components",
+      "sourceRoot": "projects/selfit-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/selfit-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/selfit-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/selfit-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/selfit-components/src/test.ts",
+            "tsConfig": "projects/selfit-components/tsconfig.spec.json",
+            "karmaConfig": "projects/selfit-components/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "selfit-components"
 }

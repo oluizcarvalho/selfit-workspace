@@ -1,0 +1,30 @@
+{
+  "name": "selfit-components",
+  "version": "0.0.1",
+  "description":"A simple lib.",
+  "author": "Luiz Carvalho (luizandre.ita@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oluizcarvalho/selfit-workspace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oluizcarvalho/selfit-workspace/issues"
+  },
+  "homepage": "https://github.com/oluizcarvalho/selfit-workspace",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "typeahead",
+    "directive",
+    "angular-material"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
