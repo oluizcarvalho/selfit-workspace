@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@
 import { MatFormFieldAppearance } from '@angular/material/form-field';
 
 @Component({
-  selector: 'app-form-input-text',
+  selector: 'self-form-input-text',
   templateUrl: './form-input-text.component.html',
   styleUrls: ['./form-input-text.component.scss'],
 })

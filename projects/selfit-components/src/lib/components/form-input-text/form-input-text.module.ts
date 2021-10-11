@@ -22,6 +22,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     NgxCurrencyModule,
     MatButtonModule,
     MatFormFieldModule
+  ],
+  exports: [
+    FormInputTextComponent
   ]
 })
 export class FormInputTextModule { }
