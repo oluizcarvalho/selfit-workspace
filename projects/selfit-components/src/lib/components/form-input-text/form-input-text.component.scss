@@ -1,0 +1,33 @@
+#form-input-text {
+  .full-width {
+    position: relative;
+    width: 100%;
+
+    .suffix-button {
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-size: 1.5em;
+      line-height: 15px;
+      color: #222;
+    }
+  }
+}
+
+#form-errors-custom {
+  position: absolute;
+  left: 18px;
+  top: 69px;
+  z-index: 10;
+
+  small {
+    font-family: inherit;
+    color: red;
+    white-space: nowrap;
+    font-size: 0.8em;
+  }
+}
+

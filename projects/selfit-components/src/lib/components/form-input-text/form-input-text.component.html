@@ -1,0 +1,135 @@
+<div id="form-input-text" [class.auto-width]="autoWidth">
+  <form [formGroup]="formGroupInput">
+    <mat-form-field class="full-width" [appearance]="appearance">
+      <mat-label>{{ label }}</mat-label>
+
+      <ng-container *ngIf="!currency">
+        <ng-container *ngIf="maskInput">
+          <ng-container *ngIf="prefix">
+            <input
+              matInput
+              [autocomplete]="autocomplete"
+              prefix="{{ prefix }}"
+              mask="{{ maskInput }}"
+              [dropSpecialCharacters]="!specialCharacters"
+              (focus)="onFocusTrigger()"
+              (blur)="onBlurTrigger()"
+              (keyup)="onKeyupTrigger()"
+              [formControlName]="formControlNameInput"
+              [type]="type"
+              [id]="id"
+              [name]="name"
+              [readonly]="readonly"
+              #input
+            />
+          </ng-container>
+
+          <ng-container *ngIf="suffix">
+            <input
+              matInput
+              [autocomplete]="autocomplete"
+              suffix="{{ suffix }}"
+              mask="{{ maskInput }}"
+              [dropSpecialCharacters]="!specialCharacters"
+              (focus)="onFocusTrigger()"
+              (blur)="onBlurTrigger()"
+              (keyup)="onKeyupTrigger()"
+              [formControlName]="formControlNameInput"
+              [type]="type"
+              [id]="id"
+              [name]="name"
+              [readonly]="readonly"
+              #input
+            />
+          </ng-container>
+
+          <ng-container *ngIf="!prefix && !suffix">
+            <input
+              matInput
+              [autocomplete]="autocomplete"
+              mask="{{ maskInput }}"
+              [dropSpecialCharacters]="!specialCharacters"
+              (focus)="onFocusTrigger()"
+              (blur)="onBlurTrigger()"
+              (keyup)="onKeyupTrigger()"
+              [formControlName]="formControlNameInput"
+              [type]="type"
+              [id]="id"
+              [name]="name"
+              [readonly]="readonly"
+              #input
+            />
+          </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="!maskInput">
+          <ng-container *ngIf="!password">
+            <input
+              matInput
+              [autocomplete]="autocomplete"
+              (focus)="onFocusTrigger()"
+              (blur)="onBlurTrigger()"
+              (keyup)="onKeyupTrigger()"
+              [formControlName]="formControlNameInput"
+              [type]="type"
+              [id]="id"
+              [name]="name"
+              [readonly]="readonly"
+              #input
+            />
+          </ng-container>
+
+          <ng-container *ngIf="password">
+            <input
+              matInput
+              [autocomplete]="autocomplete"
+              type="password"
+              (focus)="onFocusTrigger()"
+              (blur)="onBlurTrigger()"
+              (keyup)="onKeyupTrigger()"
+              [formControlName]="formControlNameInput"
+              [type]="hide ? 'password' : 'text'"
+              [id]="id"
+              [name]="name"
+              [readonly]="readonly"
+              #input
+            />
+
+            <button
+              type="button"
+              tabindex="-1"
+              mat-icon-button
+              matSuffix
+              class="suffix-button fas"
+              (click)="hide = !hide"
+              [class.fa-eye]="hide"
+              [class.fa-eye-slash]="!hide"
+            ></button>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+
+      <ng-container *ngIf="currency">
+        <input
+          matInput
+          [autocomplete]="autocomplete"
+          currencyMask
+          [options]="options"
+          (focus)="onFocusTrigger()"
+          (blur)="onBlurTrigger()"
+          (keyup)="onKeyupTrigger()"
+          [min]="minValue"
+          [formControlName]="formControlNameInput"
+          [readonly]="readonly"
+          [id]="id"
+          [name]="name"
+          [type]="type"
+          #input
+        />
+      </ng-container>
+    </mat-form-field>
+    <mat-error id="form-errors-custom" *ngIf="getCustomError && getCustomMessageError">
+      <small>{{ getCustomMessageError }}</small>
+    </mat-error>
+  </form>
+</div>
