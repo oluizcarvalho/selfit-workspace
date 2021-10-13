@@ -9,7 +9,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
   imports: [
     CommonModule,
     MatFormFieldModule
-  ], exports: [FormControlErrosDirective]
+  ], exports: [FormErrorsComponent, FormControlErrosDirective]
 })
 export class FormControlErrosModule {
 }
