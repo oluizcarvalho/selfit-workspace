@@ -8,6 +8,6 @@ import {SubmitFormButtonDirective} from "./submit-form-button.directive";
   declarations: [SubmitFormButtonDirective],
   imports: [
     CommonModule
-  ]
+  ], exports: [SubmitFormButtonDirective]
 })
 export class SubmitFormButtonModule { }
