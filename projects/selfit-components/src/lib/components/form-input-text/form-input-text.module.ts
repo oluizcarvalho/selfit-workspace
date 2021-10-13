@@ -23,8 +23,6 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     MatButtonModule,
     MatFormFieldModule
   ],
-  exports: [
-    FormInputTextComponent
-  ]
+  exports: []
 })
 export class FormInputTextModule { }

@@ -1,0 +1,17 @@
+#form-errors {
+	position: absolute;
+	left: -10px;
+	top: 54px;
+	z-index: 10;
+
+	&.hide {
+		display: none;
+	}
+
+	small {
+		font-family: inherit;
+		color: var(--colorRed);
+		white-space: nowrap;
+		font-size: 0.8em;
+	}
+}
