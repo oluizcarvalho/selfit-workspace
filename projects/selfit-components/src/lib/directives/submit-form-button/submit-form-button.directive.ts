@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-	selector: '[submitFormButton]',
+	selector: '[SelfSubmitFormButton]',
 })
 export class SubmitFormButtonDirective {
 	constructor(private elementRef: ElementRef) {}

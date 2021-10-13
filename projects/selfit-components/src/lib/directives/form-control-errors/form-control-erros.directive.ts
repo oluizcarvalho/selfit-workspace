@@ -7,7 +7,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Directive({
-	selector: '[formControlName]',
+	selector: '[SelfFormError]',
 })
 export class FormControlErrosDirective implements OnInit, OnDestroy {
 	defaultErrors: any = {

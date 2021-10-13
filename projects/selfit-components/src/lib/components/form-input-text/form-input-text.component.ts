@@ -38,7 +38,7 @@ export class FormInputTextComponent {
 
   @Input() formGroupInput: any = '' as any;
 
-  @Input() formControlName: any = '' as any;
+  @Input() formControlNameInput: any = '' as any;
 
   @Input() selected: string = '';
 
@@ -83,10 +83,10 @@ export class FormInputTextComponent {
   }
 
   get getCustomError(): boolean {
-    return this.formGroupInput.controls[this.formControlName].hasError('customErro') || false;
+    return this.formGroupInput.controls[this.formControlNameInput].hasError('customErro') || false;
   }
 
   get getCustomMessageError(): string {
-    return this.formGroupInput.controls[this.formControlName].getError('customErro') || '';
+    return this.formGroupInput.controls[this.formControlNameInput].getError('customErro') || '';
   }
 }
