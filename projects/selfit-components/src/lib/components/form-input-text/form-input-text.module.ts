@@ -7,6 +7,7 @@ import {NgxMaskModule} from "ngx-mask";
 import {NgxCurrencyModule} from "ngx-currency";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormControlErrosModule} from "../../directives";
 
 
 
@@ -14,15 +15,16 @@ import {MatFormFieldModule} from "@angular/material/form-field";
   declarations: [
     FormInputTextComponent
   ],
-  imports: [
-    CommonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    NgxMaskModule.forRoot(),
-    NgxCurrencyModule,
-    MatButtonModule,
-    MatFormFieldModule
-  ],
+    imports: [
+        CommonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        NgxMaskModule.forRoot(),
+        NgxCurrencyModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        FormControlErrosModule
+    ],
   exports: [
     FormInputTextComponent
   ]
