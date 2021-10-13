@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build selfit-components && cd dist/selfit-components && npm publish"
   },
   "private": true,
   "dependencies": {
