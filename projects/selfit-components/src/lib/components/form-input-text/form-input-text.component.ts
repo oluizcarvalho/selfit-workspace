@@ -1,6 +1,6 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import {Component, Input, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 
-import { MatFormFieldAppearance } from '@angular/material/form-field';
+import {MatFormFieldAppearance} from '@angular/material/form-field';
 
 @Component({
   selector: 'self-form-input-text',

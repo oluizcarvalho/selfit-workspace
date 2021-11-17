@@ -5,64 +5,22 @@
 
       <ng-container *ngIf="!currency">
         <ng-container *ngIf="maskInput">
-          <ng-container *ngIf="prefix">
-            <input
-              matInput
-              [autocomplete]="autocomplete"
-              prefix="{{ prefix }}"
-              mask="{{ maskInput }}"
-              [dropSpecialCharacters]="!specialCharacters"
-              (focus)="onFocusTrigger()"
-              (blur)="onBlurTrigger()"
-              (keyup)="onKeyupTrigger()"
-              [formControlName]="formControlNameInput"
-              [type]="type"
-              [id]="id"
-              [name]="name"
-              [readonly]="readonly"
-              SelfFormError
-              #input
-            />
-          </ng-container>
-
-          <ng-container *ngIf="suffix">
-            <input
-              matInput
-              [autocomplete]="autocomplete"
-              suffix="{{ suffix }}"
-              mask="{{ maskInput }}"
-              [dropSpecialCharacters]="!specialCharacters"
-              (focus)="onFocusTrigger()"
-              (blur)="onBlurTrigger()"
-              (keyup)="onKeyupTrigger()"
-              [formControlName]="formControlNameInput"
-              [type]="type"
-              [id]="id"
-              [name]="name"
-              [readonly]="readonly"
-              SelfFormError
-              #input
-            />
-          </ng-container>
-
-          <ng-container *ngIf="!prefix && !suffix">
-            <input
-              matInput
-              [autocomplete]="autocomplete"
-              mask="{{ maskInput }}"
-              [dropSpecialCharacters]="!specialCharacters"
-              (focus)="onFocusTrigger()"
-              (blur)="onBlurTrigger()"
-              (keyup)="onKeyupTrigger()"
-              [formControlName]="formControlNameInput"
-              [type]="type"
-              [id]="id"
-              [name]="name"
-              [readonly]="readonly"
-              SelfFormError
-              #input
-            />
-          </ng-container>
+          <input
+            matInput
+            [autocomplete]="autocomplete"
+            mask="{{ maskInput }}"
+            [dropSpecialCharacters]="!specialCharacters"
+            (focus)="onFocusTrigger()"
+            (blur)="onBlurTrigger()"
+            (keyup)="onKeyupTrigger()"
+            [formControlName]="formControlNameInput"
+            [type]="type"
+            [id]="id"
+            [name]="name"
+            [readonly]="readonly"
+            SelfFormError
+            #input
+          />
         </ng-container>
 
         <ng-container *ngIf="!maskInput">
@@ -133,6 +91,9 @@
           #input
         />
       </ng-container>
+      <span *ngIf="prefix" matPrefix>{{ prefix }}</span>
+      <span *ngIf="suffix" matSuffix>{{ suffix }}</span>
+
     </mat-form-field>
     <mat-error id="form-errors-custom" *ngIf="getCustomError && getCustomMessageError">
       <small>{{ getCustomMessageError }}</small>
